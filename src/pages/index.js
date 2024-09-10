@@ -12,64 +12,57 @@ export default function Home() {
       </Head>
       <main>
         <StyledWelcomeSection>
-          <StyledWelcomeText>
+          <StyledWelcomeTitle>
             Erlebe Sie einen Abend mit Klang und Speisen in einem traditionellen Tipi
+          </StyledWelcomeTitle>
+          <StyledWelcomeText>
+            Genießen Sie mit Ihren Freunden/Familie einen unvergesslichen Abend am Lagerfeuer, mit Speisen und Klang in
+            einem Tipi. Sie haben die Möglichkeit aus verschiedenen Modulen sich Ihren Abend selbst zu gestalten.
           </StyledWelcomeText>
-          <StyledWelcomeImage
-            src="/images/hero-top.png"
-            width={400}
-            height={400}
-            quality={50}
-            alt="Hero Image"
-            priority
-          />
+          <a href="#price">Mehr erfahren</a>
         </StyledWelcomeSection>
-        <StyledAboutUsSection>
+        <StyledAboutUsSection id="aboutUs">
           <h2>über Uns</h2>
           <div>
             <p>
-              Mein Name ist Christiane Wolf. Ich bin in Heidenrod - Nauroth geboren und lebe in der Wetterau in Hessen.
-              Seit 20 Jahren bin ich als Ergotherapeutin tätig und weiß wie wichtig Entspannung für unsere Gesundheit
-              ist. 2017 habe ich die Peter Hess- klang-Methode entdeckt und bin über die vielen Möglichkeiten der
-              Klangmassagen und Klang-Fantasie-reisen fasziniert. Sie können uns helfen besser und leichter in die
-              Entspannung zu kommen. Die ist auch in unseren Hirnströmen messbar.
+              Mein Name ist Christiane Wolf. Ich bin seit 20 Jahren als Ergotherapeutin tätig und weiß wie wichtig
+              Entspannung für unsere Gesundheit ist. 2017 habe ich die Peter Hess- klang-Methode entdeckt und bin über
+              die vielen Möglichkeiten der Klangmassagen und Klang-Fantasie-reisen fasziniert. Sie können uns helfen
+              besser und leichter in die Entspannung zu kommen. Die ist auch in unseren Hirnströmen messbar.
             </p>
             <p>
-              Mein Name ist Stefan Blass. Ich war über 40 Jahre selbständig in der Gastronomie tätig. Eins meiner
-              Leidenschaften gehört der Kultur der Plain-Indianerstämme. Daraus erfolgte der Gedanke in einem
-              Indianertipi mit interessierten Menschen gemeinsam indianische Abende zu gestalten. Da meine
-              Lebensgefährtin sich seit längerem mit der Peter Hess Klangmethode auseinandersetzt kam uns der Gedanke
-              die Tipiabende mit Speisen und Klangreisen zu erweitern.
+              Mein Name ist Stefan Blass. Ich war über 40 Jahre selbständig in der Gastronomie tätig. Während dieser
+              Zeit habe ich die Leidenschaft für die Kultur der Plain-Indianerstämme entdeckt. Daraus erfolgte der
+              Gedanke in einem Indianertipi mit interessierten Menschen gemeinsam indianische Abende zu gestalten.
+            </p>
+            <p>
+              Durch dieses gemeinsamen Interessen kam uns der Gedanke die Tipiabende mit Speisen und Klangreisen zu
+              erweitern.
             </p>
           </div>
         </StyledAboutUsSection>
         <StyledTeepeeSection>
           <h2>ein Abend im traditionellen Tipi</h2>
+          <p>
+            In einem Tipi, umgeben von der Natur, knistert das Lagerfeuer leise. Der Duft von Holz und frischer Luft
+            füllt den Raum. Kerzenlicht flackert sanft, während wir den Abend in Ruhe und Wärme genießen. Ein magischer
+            Moment.
+          </p>
         </StyledTeepeeSection>
         <StyledSoundJourneySection>
           <h2>eine Reise mit Klang</h2>
         </StyledSoundJourneySection>
-        <StyledPriceSection>
+        <StyledPriceSection id="price">
           <h2>unser Angebot</h2>
-          <p>Genießen Sie mit Ihren Freunden/Familie einen unvergesslichen Abend am Lagerfeuer, mit Speisen und Klang in einem Tipi. Sie haben die Möglichkeit aus verschiedenen Modulen sich Ihren Abend selbst zu gestalten. 
-
-1.  Tipianmietung ohne Service  pro Person ab zwei Personen  15 €
-
-2. Tipiabend mit Verpflegung
-    	3 Gängemenü nach Absprache und Getränke
-									Preis nach Absprache
-
-3. Tipiabend mit Klang-Fantasie-Reise (ca. 30 min.)
-	Preis pro Person  für 2 Personen					  36 €
-    	jede weitere Person 							   15 €
-
-4. Tipiabend incl. Übernachtung
-	(Schlafsäcke sind selbst mitzubringen) pro Person	   15 €
-
-
-Feuerholz wird separat berechnet.
-
-Anmietung für besondere Anlässe , Geburtstage, Hochzeiten Todesfälle							150€</p>
+          <p>
+            Genießen Sie mit Ihren Freunden/Familie einen unvergesslichen Abend am Lagerfeuer, mit Speisen und Klang in
+            einem Tipi. Sie haben die Möglichkeit aus verschiedenen Modulen sich Ihren Abend selbst zu gestalten. 1.
+            Tipianmietung ohne Service pro Person ab zwei Personen 15 € 2. Tipiabend mit Verpflegung 3 Gängemenü nach
+            Absprache und Getränke Preis nach Absprache 3. Tipiabend mit Klang-Fantasie-Reise (ca. 30 min.) Preis pro
+            Person für 2 Personen 36 € jede weitere Person 15 € 4. Tipiabend incl. Übernachtung (Schlafsäcke sind selbst
+            mitzubringen) pro Person 15 € Feuerholz wird separat berechnet. Anmietung für besondere Anlässe ,
+            Geburtstage, Hochzeiten Todesfälle 150€
+          </p>
         </StyledPriceSection>
         <StyledContactSection>
           <h2>Kontakt</h2>
@@ -80,29 +73,36 @@ Anmietung für besondere Anlässe , Geburtstage, Hochzeiten Todesfälle							15
 }
 const StyledWelcomeSection = styled.div`
   display: flex;
+  flex-direction: column;
   height: 50svh;
   margin-top: 100px;
-  position: relative;
   justify-content: center;
   align-items: center;
-`;
-const StyledWelcomeImage = styled(Image)`
-  width: 100%;
-  height: 50svh;
-  object-fit: cover;
+  scroll-margin-top: 100px;
+  background-image: url("/images/hero-top.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 `;
 
-const StyledWelcomeText = styled.h1`
-  position: absolute;
-  top: 5%;
+const StyledWelcomeTitle = styled.h1`
   color: var(--color-secondary-1);
-  padding: 2rem;
+  padding: 1rem 2rem;
   margin: 0;
   width: fit-content;
   text-align: center;
   line-height: 1.5;
 `;
-const StyledAboutUsSection = styled(StyledWelcomeSection)`
+const StyledWelcomeText = styled.p`
+  color: var(--color-primary-2);
+  padding: 1rem 2rem;
+  margin: 0;
+  width: fit-content;
+  text-align: center;
+  line-height: 1.5;
+`;
+
+const StyledAboutUsSection = styled.div`
   display: flex;
   flex-direction: column;
   color: var(--color-secondary-2);
@@ -112,6 +112,7 @@ const StyledAboutUsSection = styled(StyledWelcomeSection)`
   justify-content: start;
   align-items: start;
   padding: 2rem;
+  scroll-margin-top: 100px;
 `;
 const StyledTeepeeSection = styled(StyledAboutUsSection)`
   background-color: var(--color-secondary-3);

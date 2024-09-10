@@ -24,8 +24,14 @@ export default createGlobalStyle`
   *::after {
     box-sizing: border-box;
   }
-
-
+  html {
+	scroll-behavior: smooth;
+}
+  @media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+  }
   body {
     font-family: ${noto.style.fontFamily};
     background-color: var(--color-primary-1);
@@ -52,5 +58,13 @@ export default createGlobalStyle`
     --color-secondary-1: #3D6D73;
     --color-secondary-2: #A3BFAF;
     --color-secondary-3: #D99A4E;
+}
+a[name]::before,
+[id]::before {
+    content: '';
+    display: block;
+    visibility: hidden;
+    height: 100px;      /* this is the height of your header */
+    margin-top: -100px; /* this is the height of your header, negated */
 }
 `;
