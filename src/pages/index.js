@@ -18,7 +18,7 @@ export default function Home() {
             Genießen Sie mit Ihren Freunden/Familie einen unvergesslichen Abend am Lagerfeuer, mit Speisen und Klang in
             einem Tipi. Sie haben die Möglichkeit aus verschiedenen Modulen sich Ihren Abend selbst zu gestalten.
           </StyledWelcomeText>
-          <StyledCalltoActionbutton href="#price">Unser Angebot</StyledCalltoActionbutton>
+          <StyledCalltoActionbutton href="#price">Zum Angebot</StyledCalltoActionbutton>
         </StyledWelcomeSection>
         <StyledAboutUsSection id="aboutUs">
           <h2>über Uns</h2>
@@ -71,6 +71,11 @@ export default function Home() {
         </StyledPriceSection>
         <StyledContactSection id="contact">
           <h2>Kontakt</h2>
+          <p>Max Mustermann
+            Musterstraße 1 <br />
+            Musterstadt 12345
+            Musterland
+          </p>
         </StyledContactSection>
       </main>
     </>
@@ -92,7 +97,7 @@ const StyledWelcomeSection = styled.div`
 
 const StyledWelcomeTitle = styled.h1`
   color: var(--color-secondary-1);
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
   margin: 0;
   text-align: center;
   line-height: 1.5;
@@ -146,9 +151,10 @@ const StyledSoundJourneySection = styled(StyledAboutUsSection)`
 `;
 const StyledPriceSection = styled(StyledAboutUsSection)`
   background-color: var(--color-primary-1);
+  color: var(--color-secondary-1);
   margin-top: 0;
 `;
 const StyledContactSection = styled(StyledAboutUsSection)`
-  background-color: var(--color-primary-1);
+  background-color: var(--color-secondary-1);
   margin-top: 0;
 `;
