@@ -36,17 +36,25 @@ export default createGlobalStyle`
     font-family: ${noto.style.fontFamily};
     background-color: var(--color-primary-1);
     margin: 0;
-    padding: 0;
+    padding: 100px 0 0 0;
 
   }
 
-  h1,h2, h3, h4, h5, h6{
+  h1{
     font-family: ${courgette.style.fontFamily};
 
   }
+  h2, h3, h4, h5, h6{
+    font-family: ${cambay.style.fontFamily};
+    padding:0;
+    margin: 0;
+    line-height: 1.3;
+  }
 
- p, ul, ol, a  {
-
+ p{
+  line-height: 1.5;
+padding:0;
+margin:0;
   }
  
   
@@ -58,6 +66,11 @@ export default createGlobalStyle`
     --color-secondary-1: #3D6D73;
     --color-secondary-2: #A3BFAF;
     --color-secondary-3: #D99A4E;
+
+    /* Fonts */
+    --font-primary: 'Courgette', cursive;
+    --font-secondary: 'Cambay', sans-serif;
+
 }
 
 `;

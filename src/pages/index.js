@@ -16,7 +16,7 @@ export default function Home() {
           </StyledWelcomeTitle>
           <StyledWelcomeText>
             Genießen Sie mit Ihren Freunden/Familie einen unvergesslichen Abend am Lagerfeuer, mit Speisen und Klang in
-            einem Tipi. Sie haben die Möglichkeit aus verschiedenen Modulen sich Ihren Abend selbst zu gestalten.
+            einem traditionellen Tipi. Sie haben die Möglichkeit aus verschiedenen Modulen sich Ihren Abend selbst zu gestalten.
           </StyledWelcomeText>
           <StyledCalltoActionbutton href="#price">Zum Angebot</StyledCalltoActionbutton>
         </StyledWelcomeSection>
@@ -71,9 +71,8 @@ export default function Home() {
         </StyledPriceSection>
         <StyledContactSection id="contact">
           <h2>Kontakt</h2>
-          <p>Max Mustermann
-            Musterstraße 1 <br />
-            Musterstadt 12345
+          <p>Max Mustermann<br/>
+            Musterstraße 1<br/>Musterstadt 12345<br/>
             Musterland
           </p>
         </StyledContactSection>
@@ -85,7 +84,7 @@ const StyledWelcomeSection = styled.div`
   display: flex;
   flex-direction: column;
   height: fit-content;
-  margin-top: 100px;
+
   justify-content: center;
   align-items: center;
   scroll-margin-top: 100px;
@@ -101,6 +100,7 @@ const StyledWelcomeTitle = styled.h1`
   margin: 0;
   text-align: center;
   line-height: 1.5;
+  
 `;
 const StyledWelcomeText = styled.p`
   color: var(--color-primary-2);
@@ -108,6 +108,7 @@ const StyledWelcomeText = styled.p`
   margin: 0;
   width: fit-content;
   text-align: center;
+  font-weight: 700;
   line-height: 1.3;
   text-shadow: 1px 1px 2px rgba(235, 214, 98, 0.2);
 `;

@@ -6,7 +6,7 @@ export default function Navbar() {
     <StyledNavbar>
       <Image src="/svg/KTLogo.svg" alt="Logo" width={50} height={50} priority />
       <StyledList>
-        <li><StyledListItem href="#welcome">Home</StyledListItem></li>
+        <li><StyledListItem href="./">Home</StyledListItem></li>
         <li><StyledListItem href="#aboutUs">Über uns</StyledListItem></li>
         <li><StyledListItem href="#price">Angebot</StyledListItem></li>
         <li><StyledListItem href="#contact">Kontakt</StyledListItem></li>
