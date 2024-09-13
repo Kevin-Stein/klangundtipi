@@ -59,12 +59,5 @@ export default createGlobalStyle`
     --color-secondary-2: #A3BFAF;
     --color-secondary-3: #D99A4E;
 }
-a[name]::before,
-[id]::before {
-    content: '';
-    display: block;
-    visibility: hidden;
-    height: 100px;      /* this is the height of your header */
-    margin-top: -100px; /* this is the height of your header, negated */
-}
+
 `;

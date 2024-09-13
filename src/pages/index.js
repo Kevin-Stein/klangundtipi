@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import styled from "styled-components";
 
 export default function Home() {
@@ -11,7 +10,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
-        <StyledWelcomeSection>
+        <StyledWelcomeSection id="welcome">
           <StyledWelcomeTitle>
             Erlebe Sie einen Abend mit Klang und Speisen in einem traditionellen Tipi
           </StyledWelcomeTitle>
@@ -19,7 +18,7 @@ export default function Home() {
             Genießen Sie mit Ihren Freunden/Familie einen unvergesslichen Abend am Lagerfeuer, mit Speisen und Klang in
             einem Tipi. Sie haben die Möglichkeit aus verschiedenen Modulen sich Ihren Abend selbst zu gestalten.
           </StyledWelcomeText>
-          <a href="#price">Mehr erfahren</a>
+          <StyledCalltoActionbutton href="#price">Unser Angebot</StyledCalltoActionbutton>
         </StyledWelcomeSection>
         <StyledAboutUsSection id="aboutUs">
           <h2>über Uns</h2>
@@ -51,6 +50,12 @@ export default function Home() {
         </StyledTeepeeSection>
         <StyledSoundJourneySection>
           <h2>eine Reise mit Klang</h2>
+          <p>
+            Die Peter Hess-Klangmethode nutzt speziell entwickelte Klangschalen, deren Schwingungen Körper und Geist
+            entspannen. Dabei werden die Schalen auf den Körper gelegt und angeschlagen, um durch Vibrationen Blockaden
+            zu lösen und die Selbstheilungskräfte zu aktivieren. Sie fördert Tiefenentspannung, Stressabbau und das
+            Wohlbefinden durch harmonische Klänge und sanfte Vibrationen.
+          </p>
         </StyledSoundJourneySection>
         <StyledPriceSection id="price">
           <h2>unser Angebot</h2>
@@ -64,7 +69,7 @@ export default function Home() {
             Geburtstage, Hochzeiten Todesfälle 150€
           </p>
         </StyledPriceSection>
-        <StyledContactSection>
+        <StyledContactSection id="contact">
           <h2>Kontakt</h2>
         </StyledContactSection>
       </main>
@@ -74,7 +79,7 @@ export default function Home() {
 const StyledWelcomeSection = styled.div`
   display: flex;
   flex-direction: column;
-  height: 50svh;
+  height: fit-content;
   margin-top: 100px;
   justify-content: center;
   align-items: center;
@@ -89,7 +94,6 @@ const StyledWelcomeTitle = styled.h1`
   color: var(--color-secondary-1);
   padding: 1rem 2rem;
   margin: 0;
-  width: fit-content;
   text-align: center;
   line-height: 1.5;
 `;
@@ -99,8 +103,24 @@ const StyledWelcomeText = styled.p`
   margin: 0;
   width: fit-content;
   text-align: center;
-  line-height: 1.5;
+  line-height: 1.3;
+  text-shadow: 1px 1px 2px rgba(235, 214, 98, 0.2);
 `;
+
+const StyledCalltoActionbutton = styled.a`
+background-color: var(--color-secondary-1);
+width: fit-content;
+height: fit-content;
+margin-top: 16px;
+margin-bottom: 32px;
+text-align: center;
+padding: 15px 20px;
+text-decoration: none;
+color: var(--color-secondary-2);
+border-radius: 30px;
+box-shadow: 3px 3px 5px var(--color-primary-2);
+font-weight: 700;
+`; 
 
 const StyledAboutUsSection = styled.div`
   display: flex;
@@ -121,6 +141,7 @@ const StyledTeepeeSection = styled(StyledAboutUsSection)`
 `;
 const StyledSoundJourneySection = styled(StyledAboutUsSection)`
   background-color: var(--color-secondary-2);
+  color: var(--color-secondary-1);
   margin-top: 0;
 `;
 const StyledPriceSection = styled(StyledAboutUsSection)`

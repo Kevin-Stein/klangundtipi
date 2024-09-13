@@ -6,10 +6,10 @@ export default function Navbar() {
     <StyledNavbar>
       <Image src="/svg/KTLogo.svg" alt="Logo" width={50} height={50} priority />
       <StyledList>
-        <li>Home</li>
-        <li><a href="#aboutUs">Über uns</a></li>
-        <li><a href="#price">Angebot</a></li>
-        <li>Contact</li>
+        <li><StyledListItem href="#welcome">Home</StyledListItem></li>
+        <li><StyledListItem href="#aboutUs">Über uns</StyledListItem></li>
+        <li><StyledListItem href="#price">Angebot</StyledListItem></li>
+        <li><StyledListItem href="#contact">Kontakt</StyledListItem></li>
       </StyledList>
     </StyledNavbar>
   );
@@ -27,12 +27,19 @@ const StyledNavbar = styled.div`
   padding: 0 20px;
   backdrop-filter: blur(20px);
   color: var(--color-primary-2);
-
   z-index: 111;
 `;
 
 const StyledList = styled.ul`
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
+`;
+
+const StyledListItem = styled.a`
+text-decoration: none;
+font-weight: 700;
+color: var(--color-primary-2);
 `;
